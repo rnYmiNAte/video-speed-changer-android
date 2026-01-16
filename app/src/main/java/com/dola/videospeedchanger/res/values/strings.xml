@@ -1,1 +1,12 @@
-0
+<resources>
+    <string name="app_name">Video Velocity</string>
+    <string name="tempo_label">Playback Speed (0.1x - 10.0x)</string>
+    <string name="tempo_hint">Enter speed (e.g., 1.2345)</string>
+    <string name="start_pos_label">Start Position (seconds)</string>
+    <string name="end_pos_label">End Position (seconds)</string>
+    <string name="pos_hint">Enter time (e.g., 5.6789)</string>
+    <string name="process_btn">Process Video</string>
+    <string name="error_invalid_input">Invalid input - check values and try again</string>
+    <string name="success_processing">Video saved successfully!</string>
+    <string name="error_processing">Processing failed - try again</string>
+</resources>
