@@ -1,0 +1,61 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+*.dex
+
+# Files for the ART/Dalvik VM
+*.odex
+*.oat
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+build/
+intermediates/
+captures/
+generated/
+outputs/
+tmp/
+logs/
+.recommenders/
+
+# Gradle files
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+
+# Android Studio files
+.idea/
+*.iws
+*.iml
+*.ipr
+*.log
+local.properties
+.DS_Store
+/captures/
+.externalNativeBuild
+.cxx/
+*.jks
+*.keystore
+app-keystore.properties # Actual signing config (not example)
+
+# Proguard files
+proguard/
+*.pro
+!**/proguard-rules.pro
+!**/consumer-rules.pro
+
+# Local test files
+*.test
+*.bak
+*.tmp
+
+# Version control
+*.swp
+*~
