@@ -1,1 +1,58 @@
-0
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions for storage access -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"/> <!-- For Android 11+ if needed -->
+
+    <!-- Permission for background processing -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- Declare supported media features -->
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VideoVelocity"
+        tools:targetApi="31">
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".presentation.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Video Editor Activity -->
+        <activity
+            android:name=".presentation.editor.VideoEditorActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.main.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.main.MainActivity"/>
+        </activity>
+
+        <!-- For Android 13+ media access -->
+        <queries>
+            
+        </queries>
+    </application>
+
+</manifest>
